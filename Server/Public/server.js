@@ -1,7 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const app = express();
-const PORT = 50000;
+const PORT = 5000;
 
 
 //required for GET and POST routes

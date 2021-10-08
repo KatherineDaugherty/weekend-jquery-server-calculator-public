@@ -15,6 +15,9 @@ USER interface with
 
 SERVER SIDE 
 [ ] handle +, -, *, /  calculation ANSWER 
+    [ ]Function for each operation that changes the variable 
+    [ ]listener for button 
+    [ ]data = 
 [ ] return 201 CLEAR 
 [ ] GET request
 
