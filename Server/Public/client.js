@@ -2,9 +2,19 @@ $(onReady);
 
 function onReady() {
     console.log('jquery is loaded ');
-//click handler
-$(`#submit`).on(`click`, sendInputs);
+    getInputs(); 
+    //click handler
+    $(`#submit`).on(`click`, sendInputs);
+    $(`#clear`).on(`click`, clearInputs);
+
 }
+
+function clearInputs() {
+    $("#numInput").val('');
+    $("#numInputTwo").val('');
+    console.log('CLEAR');
+}
+
 
 //send POST with input values 
 function sendInputs() {
@@ -19,19 +29,31 @@ function sendInputs() {
             }
         }
     }).then(function (response) {
-        // renderHistory();
-        $("#numInput").val('');
-        $("#numInputTwo").val('');
+        getInputs();
     });
 }
 
 // GET array of inputHistory
-function renderHistory() {
+function getInputs() {
     $.ajax({
         method: "GET",
         url: "/submission",
     }).then(function (response) {
-        console.log(response);
-
+        console.log(`SUCCESS`, response);
+        renderHistory(response);
+    }).catch(function (response) {
+        alert(`REQUEST FAILED, try again`)
     })
+}
+
+function renderHistory (res) {
+    $(`.historyOfEquations`).empty();
+
+    for (let number of res) {
+        $(`.historyOfEquations`).append(`
+        <li>'
+        ${number.num1} ${number.num2}
+        </li>
+        `)
+    }
 }
