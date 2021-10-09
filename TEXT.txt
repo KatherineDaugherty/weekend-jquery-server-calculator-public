@@ -3,7 +3,7 @@ The logic for the calculator **must** be implemented on the server.
 SERVER SIDE LOGIC 
 
 USER interface with 
-[ ]2 input elements
+[X]2 input elements
 [ ]select type of mathmatical operation 
 [ ] submit with = <button>
 [ ] CLICK LISTENER 
@@ -23,6 +23,7 @@ SERVER SIDE
 [ ] return 201 CLEAR 
 [ ] GET request
 
+[x]TESTED  /submission in POSTMAN!!! 
 
 [ ] Keep records of math operations and solutions on server 
 [ ] display previous calculations on page when LOADS using GET request 
