@@ -1,7 +1,6 @@
 $(onReady);
 let operator = ``;
-let equals = `=`;
-
+const equals = `=`;
 
 function onReady() {
     console.log('jquery is loaded ');
@@ -36,7 +35,6 @@ function clearInputs() {
     $("#numInputTwo").val('');
     console.log('CLEAR');
 }
-
 //send POST with input values 
 function sendInputs() {
     $.ajax({
@@ -52,7 +50,6 @@ function sendInputs() {
         getInputs();
     });
 }
-
 // GET array of inputHistory
 function getInputs() {
     $.ajax({
@@ -65,7 +62,6 @@ function getInputs() {
         alert(`REQUEST FAILED, try again`)
     })
 }
-
 function renderHistory(res) {
     $(`.historyOfEquations`).empty();
 

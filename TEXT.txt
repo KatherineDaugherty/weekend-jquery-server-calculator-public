@@ -4,11 +4,11 @@ SERVER SIDE LOGIC
 
 USER interface with 
 [X]2 input elements
-[ ]select type of mathmatical operation 
-[ ] submit with = <button>
+[x]select type of mathmatical operation 
+[x] submit with = <button>
 [ ] CLICK LISTENER 
     [ ] capture input 
-    [ ] bundle in object 
+    [X] bundle in object 
     [ ] POST object to server 
         [ ]  C <button>
         [ ] clear input fields 
@@ -26,8 +26,8 @@ SERVER SIDE
 [x]TESTED  /submission in POSTMAN!!! 
 
 [ ] Keep records of math operations and solutions on server 
-[ ] display previous calculations on page when LOADS using GET request 
-[ ] Update list when calculation is made 
+[x] display previous calculations on page when LOADS using GET request 
+[X] Update list when calculation is made 
 
 --- History to exist even when Refreshing page 
 ---- history will go away after restarting server 
