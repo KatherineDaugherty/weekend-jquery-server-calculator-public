@@ -16,14 +16,14 @@ app.listen(PORT, () => {
 //hardcode array of objects data. 
 let solution = 0;
 let inputHistory = [
-    { num1: `33`, equation: `/`, num2: `23` }
+    { num1: `33`, equation: `/`, num2: `23`, equals: `=` }
 ];
 
 function listInputs(request) {
     console.log(request);
     
     let data = request;
-    console.log(`${data.num1}`, `${data.num2}`);
+    console.log(`${data.num1}`, `${data.equation}`,`${data.num2}`,`${data.equals}`);
 
     inputHistory.push(data);
     console.log(inputHistory);
@@ -31,7 +31,7 @@ function listInputs(request) {
 }
 //GET and POST 
 app.post("/submission", (req, res) => {
-    console.log('PPPPOOOOOSSTTTT');
+    console.log('POST');
     
     console.log(req.body);
     listInputs(req.body);
@@ -39,7 +39,7 @@ app.post("/submission", (req, res) => {
 });
 
 app.get("/submission", (req, res) => {
-    console.log('GGGEEEETTTT');
+    console.log('GET');
     
     res.send(inputHistory);
 });
