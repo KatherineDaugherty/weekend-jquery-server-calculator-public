@@ -57,8 +57,7 @@ function calculate (response){
             break;
     }
     inputHistory.push(response)
-    console.log(`calculator`, solution); //log solution  = number 1 
-    return solution;
+    console.log(`calculator`, response.solution); //log solution  = number 1 
 }
 
 //GET when asked for data 

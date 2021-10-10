@@ -56,6 +56,10 @@ function getInputs() {
         url: "/submission",
     }).then(function (response) {
         console.log(`SUCCESS`, response);
+        $(".answer").empty();
+        for(let i=0; i<response.length; i++){
+        $(".answer").html(`<span> ${response[i].solution} </span>`)}
+
         renderHistory(response);
     }).catch(function (response) {
         alert(`REQUEST FAILED, try again`)
@@ -73,6 +77,7 @@ function renderHistory(res) {
         </li>
         `)
     }
+    // renderSolution(res)
 }
 //append current solution to the DOM
 // function renderSolution(){
