@@ -14,7 +14,6 @@ app.listen(PORT, () => {
 });
 
 //hardcode array of objects data. 
-let solution = 0;
 let inputHistory = [
     { num1: `33`, equation: `-`, num2: `23`, equals: `=`, solution: `10` }
 ];
@@ -22,38 +21,31 @@ let inputHistory = [
 function listInputs(request) {
     // console.log(request); //logs array of data
     let data = request;
-    console.log(
-        `${data.num1}`,
-        `${data.equation}`,
-        `${data.num2}`,
-        `${data.equals}`,
-        `${data.solution}
-    `);
-    inputHistory.push(data);
+    console.log(`${data.num1}`, `${data.equation}`, `${data.num2}`, `${data.equals}`, `${data.solution}`);
 }
 //GET and POST 
 app.post("/submission", (req, res) => {
     console.log(' in SERVER POST');
     console.log(req.body); // array of data sent over 
-    calculate(req.body)
-    listInputs(req.body); //call listInputs 
+    calculate(req.body) //calls calculate function
+    listInputs(req.body); //call listInputs function
     res.sendStatus(201);
 });
 
 // calculator logic 
-function calculate (response){
+function calculate(response) {
     switch (response.equation) {
         case `+`:
             response.solution = Number(response.num1) + Number(response.num2)
             break;
         case `-`:
-            response.solution = Number(response.num1) - Number(response.num2)
+            response.solution = (response.num1) - (response.num2)
             break;
         case `*`:
-            response.solution = Number(response.num1) * Number(response.num2)
+            response.solution = (response.num1) * (response.num2)
             break;
         case `/`:
-            response.solution = Number(response.num1) / Number(response.num2)
+            response.solution = (response.num1) / (response.num2)
             break;
     }
     inputHistory.push(response)

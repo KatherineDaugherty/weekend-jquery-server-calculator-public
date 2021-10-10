@@ -7,25 +7,25 @@ USER interface with
 [x]select type of mathmatical operation 
 [x] submit with = <button>
 [ ] CLICK LISTENER 
-    [ ] capture input 
+    [x] capture input 
     [X] bundle in object 
     [ ] POST object to server 
-        [ ]  C <button>
-        [ ] clear input fields 
+        [X]  C <button>
+        [x] clear input fields 
 
 
 
 SERVER SIDE 
-[ ] handle +, -, *, /  calculation ANSWER 
-    [ ]Function for each operation that changes the variable 
-    [ ]listener for button 
-    [ ]data = object 
-[ ] return 201 CLEAR 
-[ ] GET request
+[x] handle +, -, *, /  calculation ANSWER 
+    [ x]Function for each operation that changes the variable 
+    [x]listener for button 
+    [ x]data = object 
+[x] return 201 CLEAR 
+[x ] GET request
 
 [x]TESTED  /submission in POSTMAN!!! 
 
-[ ] Keep records of math operations and solutions on server 
+[ x] Keep records of math operations and solutions on server 
 [x] display previous calculations on page when LOADS using GET request 
 [X] Update list when calculation is made 
 

@@ -57,9 +57,9 @@ function getInputs() {
     }).then(function (response) {
         console.log(`SUCCESS`, response);
         $(".answer").empty();
-        for(let i=0; i<response.length; i++){
-        $(".answer").html(`<span> ${response[i].solution} </span>`)}
-
+        for (let i = 0; i < response.length; i++) {
+            $(".answer").html(`<span> ${response[i].solution} </span>`)
+        }
         renderHistory(response);
     }).catch(function (response) {
         alert(`REQUEST FAILED, try again`)
@@ -69,7 +69,6 @@ function getInputs() {
 //Append array of inputs to the DOM
 function renderHistory(res) {
     $(`.historyOfEquations`).empty();
-
     for (let number of res) {
         $(`.historyOfEquations`).append(`
         <li>
@@ -77,10 +76,4 @@ function renderHistory(res) {
         </li>
         `)
     }
-    // renderSolution(res)
 }
-//append current solution to the DOM
-// function renderSolution(){
-//     $(`.answer`).empty();
-//     $(`.answer`).append(`<p> ${solution} </p>`);
-// }
