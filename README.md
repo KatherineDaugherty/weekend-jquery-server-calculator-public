@@ -2,7 +2,7 @@
 
 
 ## Description
- Duration: 10 hour Base assignment
+ Duration: 10+ hour Base assignment
 
 This project solved the problem of refreshing the page and losing your input information. By storing data on the server, we are able to refresh the page and still retrieve the data from the input fields. 
 

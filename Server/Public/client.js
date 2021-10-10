@@ -6,7 +6,7 @@ function onReady() {
     console.log('jquery is loaded ');
     getInputs();
     //click handler
-    $(`#submit`).on(`click`, sendInputs);
+    $(`#submit`).on(`click`, validateInputs);
     $(`#clear`).on(`click`, clearInputs);
     $(`#plus`).on(`click`, add);
     $(`#minus`).on(`click`, minus);
@@ -33,6 +33,13 @@ function clearInputs() {
     $("#numInput").val('');
     $("#numInputTwo").val('');
     console.log('CLEAR');
+}
+function validateInputs() {
+    if ($(`#numInput`).val() == `` || $(`#numInputTwo`).val() == '' || operator == ``) {
+        alert(`Alert please enter all input fields`)
+    } else {
+        sendInputs()
+    };
 }
 //send POST with input values 
 function sendInputs() {
