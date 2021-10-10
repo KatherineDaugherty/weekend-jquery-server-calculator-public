@@ -13,7 +13,7 @@ function onReady() {
     $(`#multiply`).on(`click`, multiply);
     $(`#divide`).on(`click`, divide);
 }
-function divide(){
+function divide() {
     console.log('Divide');
     operator = `/`;
 }
@@ -29,7 +29,6 @@ function add() {
     console.log('Add');
     operator = `+`;
 }
-
 function clearInputs() {
     $("#numInput").val('');
     $("#numInputTwo").val('');
@@ -60,16 +59,23 @@ function getInputs() {
         renderHistory(response);
     }).catch(function (response) {
         alert(`REQUEST FAILED, try again`)
-    })
+    });
 }
+
+//Append array of inputs to the DOM
 function renderHistory(res) {
     $(`.historyOfEquations`).empty();
 
     for (let number of res) {
         $(`.historyOfEquations`).append(`
         <li>
-        ${number.num1} ${number.equation} ${number.num2} ${number.equals}
+        ${number.num1} ${number.equation} ${number.num2} ${number.equals} ${number.solution}
         </li>
         `)
     }
 }
+//append current solution to the DOM
+// function renderSolution(){
+//     $(`.answer`).empty();
+//     $(`.answer`).append(`<p> ${solution} </p>`);
+// }
