@@ -21,9 +21,9 @@ let inputHistory = [
 
 function listInputs(request) {
     console.log(request);
-    
+
     let data = request;
-    console.log(`${data.num1}`, `${data.equation}`,`${data.num2}`,`${data.equals}`);
+    console.log(`${data.num1}`, `${data.equation}`, `${data.num2}`, `${data.equals}`);
 
     inputHistory.push(data);
     console.log(inputHistory);
@@ -31,15 +31,32 @@ function listInputs(request) {
 }
 //GET and POST 
 app.post("/submission", (req, res) => {
-    console.log('POST');
-    
+    console.log(' in SERVER POST');
     console.log(req.body);
+    let problem = req.body;
+
+    switch (problem.equation) {
+        case `+`:
+            solution = Number(problem.num1) + Number(problem.num2)
+            break;
+        case `-`:
+            solution = Number(problem.num1) - Number(problem.num2)
+            break;
+        case `*`:
+            solution = Number(problem.num1) * Number(problem.num2)
+            break;
+        case `/`:
+            solution = Number(problem.num1) / Number(problem.num2)
+            break;
+    }
+    console.log(solution);
+    
     listInputs(req.body);
     res.sendStatus(201);
 });
 
 app.get("/submission", (req, res) => {
     console.log('GET');
-    
+
     res.send(inputHistory);
 });
