@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 # Server Side Calculator
+=======
+# Server Side Calculator 
+
+[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
+>>>>>>> e23df079eb29af06b45acdeaffd5b9d97d2ba7ea
 
 ## Description
  Duration: 10 hour Base assignment
