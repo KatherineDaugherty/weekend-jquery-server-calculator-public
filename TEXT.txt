@@ -4,7 +4,7 @@ SERVER SIDE LOGIC
 
 USER interface with 
 [X]2 input elements
-[x]select type of mathmatical operation 
+[x]select type of math operation 
 [x] submit with = <button>
 [ ] CLICK LISTENER 
     [x] capture input 
